@@ -10,6 +10,14 @@
     top: 45%;
     left: 50%;
   }
+  .btn-contact {
+    color: $dark;
+    background-color: $white;
+    &:hover {
+      background-color: hsl(0, 0%, 100%, 0.3);
+      color: $white;
+    }
+  }
 }
 
 .secondary-font {
@@ -48,10 +56,12 @@
 .learn-more-yellow:hover {
   text-decoration: underline;
   text-decoration-color: $yellow;
+  text-decoration-style: wavy;
 }
 .learn-more-red:hover {
   text-decoration: underline;
   text-decoration-color: $red;
+  text-decoration-style: wavy;
 }
 .card-img-wrapper {
   height: 440px;

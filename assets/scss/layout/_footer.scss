@@ -1,4 +1,23 @@
 .footer {
   background-color: #a4ddd0;
   color: $graphic-text;
+  .menu > span {
+    padding-left: 50px;
+    &:hover {
+      color: $white;
+    }
+    &:first-child {
+      padding-left: 0px;
+    }
+  }
+  .social-media > a {
+    padding-left: 40px;
+    fill: #2c7566;
+    &:hover {
+      fill: $white;
+    }
+    &:first-child {
+      padding-left: 0px;
+    }
+  }
 }

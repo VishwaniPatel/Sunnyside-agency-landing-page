@@ -6710,6 +6710,14 @@ progress {
   top: 45%;
   left: 50%;
 }
+.main-wrapper .btn-contact {
+  color: #212529;
+  background-color: hsl(0deg, 0%, 100%);
+}
+.main-wrapper .btn-contact:hover {
+  background-color: hsla(0deg, 0%, 100%, 0.3);
+  color: hsl(0deg, 0%, 100%);
+}
 
 .secondary-font {
   font-family: "Barlow", sans-serif;
@@ -6754,11 +6762,13 @@ progress {
 .learn-more-yellow:hover {
   text-decoration: underline;
   text-decoration-color: hsl(51deg, 100%, 49%);
+  text-decoration-style: wavy;
 }
 
 .learn-more-red:hover {
   text-decoration: underline;
   text-decoration-color: hsl(7deg, 99%, 70%);
+  text-decoration-style: wavy;
 }
 
 .card-img-wrapper {
@@ -6772,6 +6782,25 @@ progress {
 .footer {
   background-color: #a4ddd0;
   color: hsl(167deg, 40%, 24%);
+}
+.footer .menu > span {
+  padding-left: 50px;
+}
+.footer .menu > span:hover {
+  color: hsl(0deg, 0%, 100%);
+}
+.footer .menu > span:first-child {
+  padding-left: 0px;
+}
+.footer .social-media > a {
+  padding-left: 40px;
+  fill: #2c7566;
+}
+.footer .social-media > a:hover {
+  fill: hsl(0deg, 0%, 100%);
+}
+.footer .social-media > a:first-child {
+  padding-left: 0px;
 }
 
 /*# sourceMappingURL=styles.css.map */
