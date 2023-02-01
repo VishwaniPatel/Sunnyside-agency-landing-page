@@ -29,35 +29,46 @@
     <div class="container h-100 overflow-auto">
       <div class="main-wrapper">
         <!-- Nav Start-->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary p-3">
-          <div class="container-fluid justify-content-between">
+        <header class="bg-body-tertiary p-3 d-flex">
+          <div class="container-fluid d-flex justify-content-between">
             <div>
               <a class="navbar-brand" href="#"
                 ><img src="images/logo.svg" alt="logo"
               /></a>
             </div>
             <div>
-              <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+              <div class="d-block d-md-none">
+                <label for="toggle">
+                  <svg
+                    width="24"
+                    height="18"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z"
+                      fill="#FFF"
+                      fill-rule="evenodd"
+                    />
+                  </svg>
+                </label>
+              </div>
+
+              <div class="d-none d-md-block">
+                <ul class="nav">
                   <li class="nav-item">
-                    <a class="nav-link secondary-font" href="#">About</a>
+                    <a class="nav-link secondary-font text-white" href="#"
+                      >About</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link secondary-font" href="#">Services</a>
+                    <a class="nav-link secondary-font text-white" href="#"
+                      >Services</a
+                    >
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link secondary-font" href="#">Projects</a>
+                    <a class="nav-link secondary-font text-white" href="#"
+                      >Projects</a
+                    >
                   </li>
                   <li class="nav-item">
                     <a class="nav-link btn-contact rounded-pill px-3"
@@ -68,9 +79,33 @@
               </div>
             </div>
           </div>
-        </nav>
-        <div class="main d-flex align-items-center flex-column">
-          <h2 class="text-uppercase text-white my-5">We are creatives</h2>
+          <input type="checkbox" id="toggle" class="d-none" />
+          <!-- Start: Menu after toggle -->
+          <div class="bg-white toggle-bar text-center">
+            <ul class="nav d-md-flex flex-column">
+              <li class="nav-item">
+                <a class="nav-link text-info" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-info" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-info" href="#">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn-contact rounded-pill px-3 mb-3"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- End: Menu -->
+        </header>
+
+        <div class="main d-flex justify-content-center flex-column">
+          <h2 class="text-uppercase text-white m-5 text-center">
+            We are creatives
+          </h2>
           <div class="arrow-img">
             <img src="images/icon-arrow-down.svg" alt="No image found" />
           </div>
@@ -78,7 +113,9 @@
       </div>
       <!-- Nav end -->
       <div class="row gx-0 gy-0">
-        <div class="col-6 d-flex justify-content-center flex-column p-100">
+        <div
+          class="col-md-6 col-12 d-flex justify-content-center flex-column order-1 order-md-0 p-md-100 p-5"
+        >
           <h2 class="fw-bold">Transform your brand</h2>
           <p class="secondary-font text-info">
             We are a full-service creative agency specializing in helping brands
@@ -87,15 +124,35 @@
           </p>
           <h6 class="text-uppercase learn-more-yellow">Learn more</h6>
         </div>
-        <div class="col-6 img-wrapper">
-          <img src="images/desktop/image-transform.jpg" alt="Transform" />
+        <div class="col-md-6 col-12 img-wrapper order-0 order-md-1">
+          <img
+            src="images/mobile/image-transform.jpg"
+            alt="Transform"
+            class="d-md-none"
+          />
+          <img
+            src="images/desktop/image-transform.jpg"
+            alt="Transform"
+            class="d-none d-md-block"
+          />
         </div>
       </div>
       <div class="row gx-0 gy-0">
-        <div class="col-6 img-wrapper">
-          <img src="images/desktop/image-stand-out.jpg" alt="Stand-out" />
+        <div class="col-md-6 col-12 img-wrapper order-0 order-md-1">
+          <img
+            src="images/mobile/image-stand-out.jpg"
+            alt="Stand-out"
+            class="d-md-none"
+          />
+          <img
+            src="images/desktop/image-stand-out.jpg"
+            alt="Stand-out"
+            class="d-none d-md-block"
+          />
         </div>
-        <div class="col-6 d-flex justify-content-center flex-column p-100">
+        <div
+          class="col-md-6 col-12 d-flex justify-content-center flex-column p-md-100 p-5 order-0 order-md-1"
+        >
           <h2 class="fw-bold">Stand out to the right audience</h2>
           <p class="secondary-font text-info">
             Using a collaborative formula of designers, researchers,
@@ -105,32 +162,34 @@
           <span class="text-uppercase learn-more-red">Learn more</span>
         </div>
       </div>
-      <div class="row gx-0">
-        <div
-          class="col-6 d-flex flex-column align-items-center justify-content-end p-4 graphic-design"
-        >
-          <h3>Graphic design</h3>
-          <p class="secondary-font">
-            Great design makes you memorable. We deliver artwork that
-            underscores your brand message and captures potential clients’
-            attention.
-          </p>
-        </div>
-        <div
-          class="col-6 d-flex flex-column align-items-center justify-content-end p-4 photography"
-        >
-          <h3>Photography</h3>
-          <p class="secondary-font">
-            Increase your credibility by getting the most stunning, high-quality
-            photos that improve your business image.
-          </p>
+      <div class="services">
+        <div class="row gx-0">
+          <div
+            class="col-md-6 col-12 d-flex flex-column align-items-center justify-content-end text-center graphic-design"
+          >
+            <h3>Graphic design</h3>
+            <p class="secondary-font">
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
+            </p>
+          </div>
+          <div
+            class="col-md-6 col-12 services d-flex flex-column align-items-center justify-content-end text-center photography"
+          >
+            <h3>Photography</h3>
+            <p class="secondary-font">
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </div>
         </div>
       </div>
 
-      <div class="row text-center p-100">
-        <h5 class="text-light ls-8 fw-bold">CLIENT TESTIMONIALS</h5>
+      <div class="row text-center testimonial-section">
+        <p class="testimonial-title text-light fw-bold">CLIENT TESTIMONIALS</p>
         <div class="row pt-5">
-          <div class="col-4">
+          <div class="col-md-4 col-12 mb-4">
             <div class="card border-0">
               <div class="card-body p-0">
                 <img
@@ -148,7 +207,7 @@
             </div>
           </div>
 
-          <div class="col-4">
+          <div class="col-md-4 col-12 mb-4">
             <div class="card border-0">
               <div class="card-body p-0">
                 <img
@@ -166,7 +225,7 @@
             </div>
           </div>
 
-          <div class="col-4">
+          <div class="col-md-4 col-12 mb-4">
             <div class="card border-0">
               <div class="card-body p-0">
                 <img
@@ -174,6 +233,7 @@
                   alt="profile"
                   class="profile-img"
                 />
+
                 <p class="text-info pt-4 secondary-font">
                   Incredible end result! Our sales increased over 400% when we
                   worked with Sunnyside. Highly recommended!
@@ -187,7 +247,7 @@
       </div>
 
       <div class="row gx-0 overflow-hidden">
-        <div class="col-3">
+        <div class="col-md-3 col-6">
           <div class="card-img-wrapper">
             <img
               src="images/mobile/image-gallery-milkbottles.jpg"
@@ -201,10 +261,10 @@
             />
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-md-3 col-6">
           <div class="card-img-wrapper">
             <img
-              src="images/mobile/image-gallery-milkbottles.jpg"
+              src="images/mobile/image-gallery-orange.jpg"
               alt="orange"
               class="d d-md-none"
             />
@@ -215,7 +275,7 @@
             />
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-md-3 col-6">
           <div class="card-img-wrapper">
             <img
               src="images/mobile/image-gallery-cone.jpg"
@@ -229,7 +289,7 @@
             />
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-md-3 col-6">
           <div class="card-img-wrapper">
             <img
               src="images/mobile/image-gallery-sugar-cubes.jpg"

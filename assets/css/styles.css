@@ -6156,7 +6156,7 @@ progress {
 
 .nav {
   --bs-nav-link-padding-x: 1rem;
-  --bs-nav-link-padding-y: 0.5rem;
+  --bs-nav-link-padding-y: 1rem;
   --bs-nav-link-font-weight: ;
   --bs-nav-link-color: var(--bs-link-color);
   --bs-nav-link-hover-color: var(--bs-link-hover-color);
@@ -6282,7 +6282,7 @@ progress {
   --bs-navbar-hover-color: rgba(0, 0, 0, 0.7);
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
   --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
-  --bs-navbar-brand-padding-y: 0.3125rem;
+  --bs-navbar-brand-padding-y: 0.8125rem;
   --bs-navbar-brand-margin-end: 1rem;
   --bs-navbar-brand-font-size: 1.25rem;
   --bs-navbar-brand-color: rgba(0, 0, 0, 0.9);
@@ -6330,7 +6330,7 @@ progress {
 
 .navbar-nav {
   --bs-nav-link-padding-x: 0;
-  --bs-nav-link-padding-y: 0.5rem;
+  --bs-nav-link-padding-y: 1rem;
   --bs-nav-link-font-weight: ;
   --bs-nav-link-color: var(--bs-navbar-color);
   --bs-nav-link-hover-color: var(--bs-navbar-hover-color);
@@ -6350,8 +6350,8 @@ progress {
 }
 
 .navbar-text {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   color: var(--bs-navbar-color);
 }
 .navbar-text a,
@@ -6705,26 +6705,41 @@ progress {
   height: 720px;
   position: relative;
 }
-.main-wrapper .arrow-img {
+.main-wrapper h2 {
+  letter-spacing: 4px;
+}
+@media (max-width: 376px) {
+  .main-wrapper {
+    background-image: url("../../../images/mobile/image-header.jpg");
+    height: 480px;
+    background-size: cover;
+  }
+}
+
+.arrow-img {
   position: absolute;
   top: 45%;
-  left: 50%;
+  left: 48%;
 }
-.main-wrapper .btn-contact {
+
+.btn-contact {
   color: #212529;
   background-color: hsl(0deg, 0%, 100%);
 }
-.main-wrapper .btn-contact:hover {
+@media (max-width: 375px) {
+  .btn-contact {
+    background-color: hsl(51deg, 100%, 49%);
+    color: hsl(0deg, 0%, 100%);
+    font-family: "Fraunces", serif;
+  }
+}
+.btn-contact:hover {
   background-color: hsla(0deg, 0%, 100%, 0.3);
   color: hsl(0deg, 0%, 100%);
 }
 
 .secondary-font {
   font-family: "Barlow", sans-serif;
-}
-
-.p-100 {
-  padding: 100px;
 }
 
 .img-wrapper {
@@ -6734,29 +6749,70 @@ progress {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
+  overflow: hidden;
+}
+@media (max-width: 375px) {
+  .img-wrapper {
+    height: 100%;
+  }
 }
 
-.graphic-design {
-  height: 540px;
+.services {
   max-width: 100%;
+  background-size: cover;
+}
+.services .graphic-design {
+  height: 540px;
   color: hsl(167deg, 40%, 24%);
   background-image: url("../../../images/desktop/image-graphic-design.jpg");
+  background-size: cover;
+  padding: 40px 140px;
 }
-
-.photography {
+@media (max-width: 375px) {
+  .services .graphic-design {
+    height: 540px;
+    background-image: url("../../../images/mobile/image-graphic-design.jpg");
+  }
+}
+.services .photography {
   height: 540px;
   color: hsl(198deg, 62%, 26%);
+  padding: 40px 140px;
   background-image: url("../../../images/desktop/image-photography.jpg");
 }
-
-.ls-8 {
-  letter-spacing: 8px;
+@media (max-width: 375px) {
+  .services .photography {
+    height: 540px;
+    background-image: url("../../../images/mobile/image-photography.jpg");
+  }
 }
 
-.profile-img {
+.testimonial-section {
+  padding: 100px;
+}
+@media (max-width: 375px) {
+  .testimonial-section {
+    padding: 80px 20px;
+  }
+}
+.testimonial-section .testimonial-title {
+  letter-spacing: 8px;
+  font-size: 16px;
+}
+@media (max-width: 375px) {
+  .testimonial-section .testimonial-title {
+    letter-spacing: 4px;
+  }
+}
+.testimonial-section .profile-img {
   border-radius: 50%;
   overflow: hidden;
   height: 100px;
+}
+@media (max-width: 375px) {
+  .testimonial-section .profile-img {
+    height: 70px;
+  }
 }
 
 .learn-more-yellow:hover {
@@ -6778,7 +6834,47 @@ progress {
   max-height: 100%;
   object-fit: cover;
 }
+@media (max-width: 376px) {
+  .card-img-wrapper {
+    height: 180px;
+  }
+}
 
+header {
+  position: relative;
+}
+
+.toggle-bar {
+  padding: 20px;
+  position: absolute;
+  display: none;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: 24px;
+  font-family: "Barlow", sans-serif;
+}
+.toggle-bar::before {
+  position: absolute;
+  top: -20px;
+  right: 0;
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid hsl(0deg, 0%, 100%);
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid hsl(0deg, 0%, 100%);
+}
+
+@media (max-width: 768px) {
+  #toggle:checked + .toggle-bar {
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .footer {
   background-color: #a4ddd0;
   color: hsl(167deg, 40%, 24%);

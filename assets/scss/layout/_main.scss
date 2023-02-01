@@ -4,27 +4,35 @@
   background-size: contain;
   height: 720px;
   position: relative;
-
-  .arrow-img {
-    position: absolute;
-    top: 45%;
-    left: 50%;
+  h2 {
+    letter-spacing: 4px;
   }
-  .btn-contact {
-    color: $dark;
-    background-color: $white;
-    &:hover {
-      background-color: hsl(0, 0%, 100%, 0.3);
-      color: $white;
-    }
+  @media (max-width: 376px) {
+    background-image: url("../../../images/mobile/image-header.jpg");
+    height: 480px;
+    background-size: cover;
   }
 }
-
+.arrow-img {
+  position: absolute;
+  top: 45%;
+  left: 48%;
+}
+.btn-contact {
+  color: $dark;
+  background-color: $white;
+  @media (max-width: 375px) {
+    background-color: $yellow;
+    color: $white;
+    font-family: $font-family-base;
+  }
+  &:hover {
+    background-color: hsl(0, 0%, 100%, 0.3);
+    color: $white;
+  }
+}
 .secondary-font {
   font-family: "Barlow", sans-serif;
-}
-.p-100 {
-  padding: 100px;
 }
 .img-wrapper {
   height: 540px;
@@ -32,27 +40,64 @@
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
+    overflow: hidden;
+  }
+  @media (max-width: 375px) {
+    height: 100%;
   }
 }
-.graphic-design {
-  height: 540px;
+
+.services {
   max-width: 100%;
-  color: $graphic-text;
-  background-image: url("../../../images/desktop/image-graphic-design.jpg");
+  background-size: cover;
+
+  .graphic-design {
+    height: 540px;
+    color: $graphic-text;
+    background-image: url("../../../images/desktop/image-graphic-design.jpg");
+    background-size: cover;
+    padding: 40px 140px;
+    @media (max-width: 375px) {
+      height: 540px;
+      background-image: url("../../../images/mobile/image-graphic-design.jpg");
+    }
+  }
+  .photography {
+    height: 540px;
+    color: $photography-text;
+    padding: 40px 140px;
+    background-image: url("../../../images/desktop/image-photography.jpg");
+
+    @media (max-width: 375px) {
+      height: 540px;
+      background-image: url("../../../images/mobile/image-photography.jpg");
+    }
+  }
 }
-.photography {
-  height: 540px;
-  color: $photography-text;
-  background-image: url("../../../images/desktop/image-photography.jpg");
+
+.testimonial-section {
+  padding: 100px;
+  @media (max-width: 375px) {
+    padding: 80px 20px;
+  }
+
+  .testimonial-title {
+    letter-spacing: 8px;
+    font-size: 16px;
+    @media (max-width: 375px) {
+      letter-spacing: 4px;
+    }
+  }
+  .profile-img {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 100px;
+    @media (max-width: 375px) {
+      height: 70px;
+    }
+  }
 }
-.ls-8 {
-  letter-spacing: 8px;
-}
-.profile-img {
-  border-radius: 50%;
-  overflow: hidden;
-  height: 100px;
-}
+
 .learn-more-yellow:hover {
   text-decoration: underline;
   text-decoration-color: $yellow;
@@ -66,8 +111,45 @@
 .card-img-wrapper {
   height: 440px;
   img {
-    // max-width: 100%;
     max-height: 100%;
     object-fit: cover;
+  }
+  @media (max-width: 376px) {
+    height: 180px;
+  }
+}
+// Header start
+header {
+  position: relative;
+}
+.toggle-bar {
+  padding: 20px;
+  position: absolute;
+  display: none;
+  top: 50px;
+  left: 0;
+  right: 0;
+  margin: 24px;
+  font-family: "Barlow", sans-serif;
+
+  &::before {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid $white;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid $white;
+  }
+}
+@media (max-width: 768px) {
+  #toggle:checked + .toggle-bar {
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
