@@ -8,9 +8,6 @@
 
 html,
 body {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
   font-family: "Fraunces", serif;
 }
 
@@ -6699,7 +6696,7 @@ progress {
 }
 
 .main-wrapper {
-  background-image: url("../../../images/desktop/image-header.jpg");
+  background-image: url("./../../../assets/images/desktop/image-header.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   height: 720px;
@@ -6710,7 +6707,7 @@ progress {
 }
 @media (max-width: 376px) {
   .main-wrapper {
-    background-image: url("../../../images/mobile/image-header.jpg");
+    background-image: url("./../../assets/images/mobile/image-header.jpg");
     height: 480px;
     background-size: cover;
   }
@@ -6764,26 +6761,26 @@ progress {
 .services .graphic-design {
   height: 540px;
   color: hsl(167deg, 40%, 24%);
-  background-image: url("../../../images/desktop/image-graphic-design.jpg");
+  background-image: url("~/assets/images/desktop/image-graphic-design.jpg");
   background-size: cover;
   padding: 40px 140px;
 }
 @media (max-width: 375px) {
   .services .graphic-design {
     height: 540px;
-    background-image: url("../../../images/mobile/image-graphic-design.jpg");
+    background-image: url("~/images/mobile/image-graphic-design.jpg");
   }
 }
 .services .photography {
   height: 540px;
   color: hsl(198deg, 62%, 26%);
   padding: 40px 140px;
-  background-image: url("../../../images/desktop/image-photography.jpg");
+  background-image: url("~images/desktop/image-photography.jpg");
 }
 @media (max-width: 375px) {
   .services .photography {
     height: 540px;
-    background-image: url("../../../images/mobile/image-photography.jpg");
+    background-image: url("./../../assets/images/mobile/image-photography.jpg");
   }
 }
 
