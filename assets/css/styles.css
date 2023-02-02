@@ -6696,7 +6696,7 @@ progress {
 }
 
 .main-wrapper {
-  background-image: url("~/assets/images/desktop/image-header.jpg");
+  background-image: url("./../../../../sunnyside-agency-landing-page-main/assets/images/desktop/image-header.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   height: 715px;
